@@ -7,7 +7,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Nome: " + nome;
+        return "Nome: " + getNome();
     }
 
     public String getNome() {
