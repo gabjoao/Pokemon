@@ -8,27 +8,104 @@ public class Pokemon extends Animal {
     private int valorAtaque;
 
     //Construtor com os dois tipos
-    public Pokemon(String nome, int hPTotal, int hPAtual, int iniciativa, String tipo1, String tipo2, String nomeAtaque, int valorAtaque) {
+    public Pokemon(String nome, int hPTotal, int hPAtual, int iniciativa, String tipo1, String tipo2, String nomeAtaque, int valorAtaque) throws Exception {
         super(nome);
-        setHPTotal(hPTotal);
-        setHPAtual(hPAtual);
-        setIniciativa(iniciativa);
-        setTipo1(tipo1);
-        setTipo2(tipo2);
-        setNomeAtaque(nomeAtaque);
-        setValorAtaque(valorAtaque);
+
+        boolean sucesso = false;
+
+        if (HPTotal < 0)
+            throw new Exception("HP invalido");
+        else 
+            sucesso = true;
+
+        if (hPAtual < 0)
+            throw new Exception("HP invalido");
+        else 
+            sucesso = true;
+            
+        if (iniciativa < 0)
+            throw new Exception("Iniciativa invalida");
+        else 
+            sucesso = true;
+
+        if (tipo1.length() < 3)
+            throw new Exception("Tipo invalido");
+        else 
+            sucesso = true;
+
+        if (tipo2.length() < 3)
+            throw new Exception("Tipo invalido");
+        else 
+            sucesso = true;
+
+        if (nomeAtaque.length() < 3)
+            throw new Exception("Nome do ataque invalido invalido");
+        else 
+            sucesso = true;
+
+        if (valorAtaque < 0)
+            throw new Exception("Valor do ataque invalido");
+        else 
+            sucesso = true;
+
+
+        if(sucesso){
+            setHPTotal(hPTotal);
+            setHPAtual(hPAtual);
+            setIniciativa(iniciativa);
+            setTipo1(tipo1);
+            setTipo2(tipo2);
+            setNomeAtaque(nomeAtaque);
+            setValorAtaque(valorAtaque);
+        }
 
     }
 
     //Construtor com apenas um tipo
-    public Pokemon(String nome, int hPTotal, int hPAtual, int iniciativa, String tipo1, String nomeAtaque, int valorAtaque) {
+    public Pokemon(String nome, int hPTotal, int hPAtual, int iniciativa, String tipo1, String nomeAtaque, int valorAtaque) throws Exception{
         super(nome);
-        setHPTotal(hPTotal);
-        setHPAtual(hPAtual);
-        setIniciativa(iniciativa);
-        setTipo1(tipo1);
-        setNomeAtaque(nomeAtaque);
-        setValorAtaque(valorAtaque);
+
+        boolean sucesso = false;
+
+        if (HPTotal < 0)
+            throw new Exception("HP invalido");
+        else 
+            sucesso = true;
+
+        if (hPAtual < 0)
+            throw new Exception("HP invalido");
+        else 
+            sucesso = true;
+            
+        if (iniciativa < 0)
+            throw new Exception("Iniciativa invalida");
+        else 
+            sucesso = true;
+
+        if (tipo1.length() < 3)
+            throw new Exception("Tipo invalido");
+        else 
+            sucesso = true;
+
+        if (nomeAtaque.length() < 3)
+            throw new Exception("Nome do ataque invalido invalido");
+        else 
+            sucesso = true;
+
+        if (valorAtaque < 0)
+            throw new Exception("Valor do ataque invalido");
+        else 
+            sucesso = true;
+
+
+        if(sucesso){
+            setHPTotal(hPTotal);
+            setHPAtual(hPAtual);
+            setIniciativa(iniciativa);
+            setTipo1(tipo1);
+            setNomeAtaque(nomeAtaque);
+            setValorAtaque(valorAtaque);
+        }
 
     }
 
