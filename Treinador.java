@@ -9,7 +9,7 @@ public class Treinador extends Animal {
 
     @Override
     public String toString() {
-        return super.toString() + "\nIdade: " + idade;
+        return super.toString() + "\nIdade: " + getIdade();
     }
 
     public int getIdade() {
