@@ -111,7 +111,13 @@ public class Pokemon extends Animal {
 
     @Override
     public String toString() {
-        return super.toString() + "\nHP total: " + getHPTotal() + "\nHP Atual: " + getHPAtual() + "\nIniciativa: " + getIniciativa() + "\nTipo: " + getTipo1() + "\nNome do ataque: " + getNomeAtaque() + "\nValor do ataque: " + getValorAtaque();
+        return super.toString() + 
+        "\nHP total: " + getHPTotal() + 
+        "\nHP Atual: " + getHPAtual() + 
+        "\nIniciativa: " + getIniciativa() + 
+        "\nTipo: " + getTipo1() + "\tTipo: " + getTipo2() + 
+        "\nNome do ataque: " + getNomeAtaque() + 
+        "\nValor do ataque: " + getValorAtaque();
     }
 
     public int getHPTotal() {
