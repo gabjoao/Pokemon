@@ -3,7 +3,7 @@ public class Treinador extends Animal {
 
     public Treinador(String nome, int idade) {
         super(nome);
-        this.idade = idade;
+        setIdade(idade);
 
     }
 
