@@ -11,11 +11,11 @@ public class JogoPokemon {
 
         //System.out.println("Treinador: " + treinador.toString());
         do {
-            System.out.println("MENU: ");
+            System.out.println("\nMENU: ");
             System.out.println("1. Cadastrar Pokemon");
             System.out.println("2. Listar Pokemon");
-//          System.out.println("3. Batalha");
-            System.out.println("3. Sair");
+            System.out.println("3. Batalha");
+            System.out.println("4. Sair");
 
             opcao = input.nextInt();
 
@@ -32,6 +32,10 @@ public class JogoPokemon {
             break;
 
             case 3:
+            batalha(treinador, pokemonLista);
+            break;
+
+            case 4:
             System.out.println("O programa foi encerrado.");
             break;
 
@@ -110,15 +114,13 @@ public class JogoPokemon {
                     System.err.println("Nao foi possivel cadastrar o Pokemon");
 
                 }
-
             }
 
            System.out.println("Deseja cadastrar outro Pokemon?");
            System.out.println("1. Sim\n2. Voltar");
            op = input.nextInt();
            
-
-    }while (op == 1);
+    } while (op == 1);
 
         menu(treinador, pokemonLista);
         input.close();
@@ -147,13 +149,21 @@ public class JogoPokemon {
 
     }
 
+
+    //WIP Batalha
+    public static void batalha(Treinador treinador, ArrayList<Pokemon> pokemonLista){
+        
+
+
+    }
+
     public static void main(String[] args) {
         Treinador treinador = new Treinador("nome", 1);
         Pokemon Pikachu = null;
         Pokemon Pidgey = null;
         ArrayList<Pokemon> pokemonLista = new ArrayList<>();
 
-        //Criação dos dois primeiros Pokémon
+        //Pré-Cadastro dos dois primeiros Pokémon
         try {
             Pikachu = new Pokemon("Pikachu", 35, 35, 90, "Eletric", "Thunder Shock", 15);
             pokemonLista.add(Pikachu);
